@@ -1,0 +1,20 @@
+.photo {
+  padding: 0 20px;
+
+  &__fields {
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 600px;
+  }
+
+  &__button {
+    margin-bottom: 20px;
+  }
+
+  &__album-place {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}

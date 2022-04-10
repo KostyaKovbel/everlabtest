@@ -1,0 +1,9 @@
+.todoList {
+  min-width: 40%;
+  display: flex;
+  flex-direction: column;
+
+  &__filter {
+    width: 200px;
+  }
+}

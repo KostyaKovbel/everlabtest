@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import 'bulma/css/bulma.min.css';
+import { Nav } from './Components/MainNav/Nav';
+import { Route, Routes } from 'react-router-dom';
+import { HomePage } from './Components/HomePage/HomePage';
+import { TodoPage } from './Components/Todo/TodoPage';
+import { PhotosPage } from './Components/PhotosPage/PhotoPage';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Nav />
       </header>
+      <main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/todos" element={<TodoPage />}>
+          <Route path=":todoId" element={<TodoPage />} />
+        </Route>
+        <Route path="/photos" element={<PhotosPage />} />
+      </Routes>
+      </main>
     </div>
   );
 }
