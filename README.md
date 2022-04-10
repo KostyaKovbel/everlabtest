@@ -1,6 +1,8 @@
 # TT for Everlabs
 
-[Demo Link](https://KostyaKovbel.github.io/everlabstest)
+[DEMO LINK](https://kostyakovbel.github.io/everlabtest/)
+
+[TASK](https://drive.google.com/file/d/1RMhJnLr2rS16Fr7o889XCbkPdMnovLlt/view)
 
 ## Local development
 
