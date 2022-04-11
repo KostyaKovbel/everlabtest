@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/everlabtest/static/css/main.303856fb.css",
-    "main.js": "/everlabtest/static/js/main.818bdcb3.js",
+    "main.css": "/everlabtest/static/css/main.cbbf2185.css",
+    "main.js": "/everlabtest/static/js/main.6fce542e.js",
     "index.html": "/everlabtest/index.html",
-    "main.303856fb.css.map": "/everlabtest/static/css/main.303856fb.css.map",
-    "main.818bdcb3.js.map": "/everlabtest/static/js/main.818bdcb3.js.map"
+    "main.cbbf2185.css.map": "/everlabtest/static/css/main.cbbf2185.css.map",
+    "main.6fce542e.js.map": "/everlabtest/static/js/main.6fce542e.js.map"
   },
   "entrypoints": [
-    "static/css/main.303856fb.css",
-    "static/js/main.818bdcb3.js"
+    "static/css/main.cbbf2185.css",
+    "static/js/main.6fce542e.js"
   ]
 }
