@@ -3,6 +3,7 @@ import classnames from "classnames";
 import { Todo } from "../../types/Todo"
 import "./TodoCard.scss";
 import { TodoContext } from "../Todo/TodoPage";
+import { Link } from "react-router-dom";
 
 type Props = {
   todo: Todo,
@@ -11,11 +12,13 @@ type Props = {
 type ContextProps = {
   todos: Todo[],
   setTodos: (value: Todo[]) => void,
+  setSelectedTodo: (todo: Todo | undefined) => void,
+  setSelectedTodoId: (id: number) => void,
 }
 
 
 export const TodoCard: React.FC<Props> = ({ todo }) => {
-  const { todos, setTodos } = useContext<ContextProps>(TodoContext);
+  const { todos, setTodos, setSelectedTodo, setSelectedTodoId } = useContext<ContextProps>(TodoContext);
 
   const handleStatus = (todos: Todo[]) => {
     return [...todos].map(currentTodo => {
@@ -29,7 +32,14 @@ export const TodoCard: React.FC<Props> = ({ todo }) => {
   };
 
   return (
-    <div className="todo__card card">
+    <Link 
+      to={todo.id.toString()}
+      onClick={() => {
+        setSelectedTodo(todo);
+        setSelectedTodoId(todo.id);
+      }}
+      className="todo__card card"
+    >
       <p 
         className={classnames(
           'card__title',
@@ -51,6 +61,6 @@ export const TodoCard: React.FC<Props> = ({ todo }) => {
           );
         }}
       />
-    </div>
+    </Link>
   );
 };

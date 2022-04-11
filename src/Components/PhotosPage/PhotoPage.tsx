@@ -60,7 +60,7 @@ export const PhotosPage: React.FC = () => {
         disabled={+searchQuery === albumId || +searchQuery === 0}
         onClick={onSearch}
       >
-        Search
+        Get Photos
       </button>
 
       {photos && (

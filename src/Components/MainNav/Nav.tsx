@@ -6,9 +6,11 @@ export const Nav: React.FC = () => (
     <Link to="/">
       Home
     </Link>
+
     <Link to="todos">
       Todos
     </Link>
+
     <Link to="photos">
       Photos
     </Link>
