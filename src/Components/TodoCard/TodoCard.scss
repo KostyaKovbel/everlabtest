@@ -3,6 +3,13 @@
   display: flex;
   gap: 10px;
 
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: white;
+    background-color: rgb(121, 156, 121);
+  }
+
   button {
     height: 20px;
   }
