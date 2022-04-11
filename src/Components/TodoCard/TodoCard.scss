@@ -10,6 +10,16 @@
     background-color: rgb(121, 156, 121);
   }
 
+  &--selected {
+    color: white;
+    background-color: rgb(119, 187, 119);
+
+    &:hover {
+      color: white;
+      background-color: rgb(119, 187, 119);
+    }
+  }
+
   button {
     height: 20px;
   }

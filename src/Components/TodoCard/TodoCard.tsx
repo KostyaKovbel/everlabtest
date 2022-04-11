@@ -11,6 +11,7 @@ type Props = {
 
 type ContextProps = {
   todos: Todo[],
+  selectedTodoId: number,
   setTodos: (value: Todo[]) => void,
   setSelectedTodo: (todo: Todo | undefined) => void,
   setSelectedTodoId: (id: number) => void,
@@ -18,7 +19,14 @@ type ContextProps = {
 
 
 export const TodoCard: React.FC<Props> = ({ todo }) => {
-  const { todos, setTodos, setSelectedTodo, setSelectedTodoId } = useContext<ContextProps>(TodoContext);
+  const 
+  { 
+    todos, 
+    selectedTodoId, 
+    setTodos, 
+    setSelectedTodo, 
+    setSelectedTodoId 
+  } = useContext<ContextProps>(TodoContext);
 
   const handleStatus = (todos: Todo[]) => {
     return [...todos].map(currentTodo => {
@@ -38,7 +46,13 @@ export const TodoCard: React.FC<Props> = ({ todo }) => {
         setSelectedTodo(todo);
         setSelectedTodoId(todo.id);
       }}
-      className="todo__card card"
+      className={classnames(
+        'todo__card',
+        'card',
+        {
+          'card--selected': todo.id === selectedTodoId,
+        }
+      )}
     >
       <p 
         className={classnames(
